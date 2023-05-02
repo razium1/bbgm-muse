@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>BasketballGM StatMuse</title>
+    <title>BBGM Muse</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>BasketballGM StatMuse</h1>
-  <form id="upload-form">
-    <label for="json-upload">Upload JSON file:</label>
-    <input type="file" id="json-upload" accept=".json">
-    <br><br>
-    <label for="url-input">Or provide a URL link:</label>
-    <input type="text" id="url-input">
-    <br><br>
-    <button type="submit">Submit</button>
-  </form>
-  
-  <script src="script.js"></script>
+    <h1>BBGM Muse</h1>
+    <label for="searchInput">Search player:</label>
+    <input type="text" id="searchInput">
+    <button onclick="searchPlayer()">Search</button>
+    <table id="statsTable">
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Team</th>
+                <th>GP</th>
+                <th>MIN</th>
+                <th>FGM</th>
+                <th>FGA</th>
+                <th>FG%</th>
+                <th>3PM</th>
+                <th>3PA</th>
+                <th>3P%</th>
+                <th>FTM</th>
+                <th>FTA</th>
+                <th>FT%</th>
+                <th>TOV</th>
+                <th>PF</th>
+                <th>ORB</th>
+                <th>DRB</th>
+                <th>REB</th>
+                <th>AST</th>
+                <th>STL</th>
+                <th>BLK</th>
+                <th>PTS</th>
+            </tr>
+        </thead>
+        <tbody id="statsTableBody"></tbody>
+    </table>
 </body>
 </html>
